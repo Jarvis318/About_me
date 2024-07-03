@@ -1,0 +1,89 @@
+body 
+{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+    background-color: #b6dbfd;
+    font-size: 200%;
+    
+    
+    
+}
+
+
+header
+{
+    display: flex; /* NOTE: Needed even though we defined display:flex in body. */
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    background-color: #13293d;
+    color: #fff;
+}
+
+.head_1 /* Class for image and title. */
+ {
+    flex-direction: row; /* Changes the flex direction back to row.*/
+}
+
+body h1{
+    margin: 15px 15px; /* Sets small margins for the title to make it in line with the image. */
+    font-size: 200%;
+}
+
+
+
+
+nav a{ /* NOTE: Nav by itself doesn't work. Won't effect child elements I think. */
+    padding: 3px; 
+    text-align: center;
+  }
+
+img{
+    width: 200px;
+
+}
+
+section{
+    display: flex;
+    align-items: flex-start; /* Align the child elements to the top of the parent */
+    flex-direction: row;/* Align the child elements in a column. Needed as we changed the default behavior
+    of them with flex. */
+    margin: 15px 15px 0 0;  /*Defines the margins as 15px from top and bottom.*/
+}
+
+main section{
+    padding: 50px 10px;
+    margin: 250px 250px 0 0;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.subtitles {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h2{
+    margin-right: 100px;
+}
+
+footer{
+    padding: 50px;
+    display: flex; /*Needed as we only defined flex in the header and body. */
+    justify-content: center;
+    color: white;
+    background-color: black;
+    margin: 50px 0 0 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+  
+    main {
+      max-width: 120px;
+    }
+  }
